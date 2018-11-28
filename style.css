@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.logopng {
+    width: 650px;
+    height: 650px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.slidercontainer{
+    width: 100%;
+}
+.slider{
+    -webkit-appearance: none;
+    outline: none;
+    width: 60%;
+    background: #737373;
+    opacity: 0.7;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -ms-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #075B91;
+    cursor: pointer;
+}
+.slider:hover{
+    opacity: 1;
+}

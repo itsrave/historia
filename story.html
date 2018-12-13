@@ -12,13 +12,22 @@
         var x = document.getElementById("range").value;
         document.getElementById("rvalue").innerHTML = x;
     }
-    document.addEventListener("click", getRange)
+    document.addEventListener("mousemove", getRange)
     </script>
 </head>
 
 <body>
     <div class="container">
-        <img class="logopng" src="img/logo.png">
+    <div class="container-slides">
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id mauris quis est sollicitudin pharetra. Nam porttitor nibh vel odio venenatis, sit amet cursus nibh euismod. Phasellus at felis erat. Pellentesque id tortor turpis. Pellentesque rutrum nisi in orci molestie, eget tincidunt justo suscipit. Suspendisse vitae lorem non mi eleifend mattis quis non augue. Ut faucibus sodales ante.
+            </p>
+        </div>
+        <div class="images">
+            <img class="image" src="img/zdj.%2060.JPG">
+            <img class="image" src="img/zdj.%2064.JPG">
+        </div>
+    </div>
     <div class="slidercontainer">
         <input type="range" min="1" max="20" value="10" class="slider" id="range">
         <br/>

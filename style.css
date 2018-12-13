@@ -1,6 +1,41 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+.container-slides{
+    position: relative;
+    background-color: aqua;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+.text{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+}
+.images{
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: red;
+}
+.image{
+    width: 100%;
+    height: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+.image:nth-child(odd){
+    display: block
 }
 .logopng {
     width: 650px;
@@ -11,13 +46,15 @@ html, body {
     display: inline-block;
 }
 
-.slidercontainer{
-    width: 100%;
+.slidercontainer {
+    width: 60%;
+    margin: 0 auto;
 }
 .slider{
+    margin: 0;
     -webkit-appearance: none;
     outline: none;
-    width: 60%;
+    width: 100%;
     background: #737373;
     opacity: 0.7;
     -webkit-transition: opacity .2s;

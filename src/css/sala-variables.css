@@ -1,0 +1,16 @@
+* {
+  --color-logo:       #095D93;
+  --color-text:       #FFFFFF;
+  --color-background: #DDD;
+  --color-highlight:  #379BC1;
+  --color-row:        #075B91;
+  --last-cell-width:  15em;
+
+  --vertical-margin: 2vh;
+  --horizontal-margin: 0.5em;
+
+  --border: 0;
+
+  --iss-height:   5em;
+  --clock-height: 5em;
+}

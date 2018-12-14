@@ -1,0 +1,111 @@
+* {
+  --color-logo: #075B91;
+  --color-text: #FFFFFF;
+  --border: 0.2em;
+  --border-width: 0.2em;
+  --margin-top: 1vh 1vh;
+}
+
+body {
+  background-color: #FFF;
+  font-family: "Tw Cen Mt", sans-serif;
+  margin: 0;
+}
+
+#lewy {
+  width: 75vw;
+  margin: 0 12.5vw;
+}
+
+#zegar {
+  margin: var(--margin-top);
+  float: left;
+  border-radius: 50%;
+  border: 2px var(--color-logo) solid;
+}
+
+#informacje {
+  float: left;
+  background-color: var(--color-logo);
+  border-radius: var(--border);
+  color: var(--color-text);
+  /* margin: 1vh 5vw; */
+  margin: var(--margin-top);
+  font-size: large;
+  width: 60%;
+  padding: 0.5em;
+  text-align: center;
+}
+
+#informacje p {
+  margin: 0;
+}
+
+#informacje p:not(:first-of-type) {
+  margin-top: 0.25em;
+}
+
+.center {
+  text-align: center;
+}
+
+#dzwonki {
+  margin-top: 0 !important;
+  counter-reset: dzwonek;
+}
+
+#dzwonki div {
+  --marigin: 0.25em;
+  width: calc((100% / 3) - (var(--marigin) * 2));
+  margin: 0 var(--marigin);
+  float: left;
+  text-align: center;
+}
+
+#dzwonki div span {
+  color: #BBB;
+}
+
+#lekcje {
+  --margin: 0.25em;
+  clear: both;
+  /* width: calc(100vw - (var(--margin) * 2)); */
+  /* height: 100%; */
+  margin: 0 var(--marigin);
+  padding: 0;
+  text-align: center;
+}
+
+.oddzial {
+  --margin-top: 0.5em;
+  --margin-side: 0.5em;
+  /* font-size: x-large; */
+  background-color: var(--color-logo);
+  color: var(--color-text);
+  float: left;
+  margin: 0.25% 0.25%;
+  width: 24%;
+  height: 8em;
+  display: none;
+  border-radius: var(--border);
+}
+
+.nazwa {
+  text-align: center;
+  margin: 0.3em 0;
+  font-weight: 800;
+}
+
+.obecnaLekcja {
+  padding: 0.2em 0.5em;
+}
+
+#napisLekcje {
+  color: var(--color-logo);
+  text-decoration: underline;
+  font-weight: 800;
+  text-align: center;
+  font-size: x-large;
+  margin: 0;
+  width: 100%;
+}

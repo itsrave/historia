@@ -1,0 +1,38 @@
+* {
+  --news-bar-height: 4.48em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  outline: none;
+  border: 0;
+  width: 100vw;
+  height: 80vh;
+  position: fixed;
+}
+
+#pdf {
+  position: fixed;
+  top: 0;
+  height: calc(100vh - var(--news-bar-height));
+  width: 100vw;
+}
+
+#bottom {
+height: var(--news-bar-height);
+  width: 100vw;
+  bottom: 0;
+}
+
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  cursor: none;
+}

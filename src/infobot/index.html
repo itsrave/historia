@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Infobot LCKZiU</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="plan"></div>
+      <div id="search"></div>
+      <div id="showTimeTable" class="noselect">Pokaż plan lekcji</div>
+      <div id="timeTable" clas="noselect"></div>
+      <div id="targetInfo">
+        <div id="targetPrevious">←</div>
+        <div id="targetName"></div>
+        <div id="targetNext">→</div>
+      </div>
+    </div>
+    <!-- <script type="text/javascript">
+         const spoofedDate = new Date("Sat Aug 18 2017 11:18:46 GMT+0200 (CEST)");
+         Date = undefined;
+         Date = function () {
+         return spoofedDate;
+         };
+         console.log("Spoofing Date to:", new Date());
+         </script> -->
+    <script type="text/javascript" src="js/lib/range.js"></script>
+    <script type="text/javascript" src="js/lib/autocompleter.js"></script>
+    <script type="text/javascript" src="js/targetHandler.js"></script>
+    <script type="text/javascript" src="js/autocompleteInit.js"></script>
+    <script type="text/javascript" src="js/lib/getDOM.js"></script>
+    <script type="text/javascript" src="js/hour.js"></script>
+    <script type="text/javascript" src="js/timetable.js"></script>
+    <script type="text/javascript" src="js/lib/insertSVG.js"></script>
+    <script type="text/javascript" src="js/svg.js"></script>
+    <script type="text/javascript" src="js/lib/getJSON.js"></script>
+    <script type="text/javascript" src="js/json.js"></script>
+    <script type="text/javascript" src="js/timeout.js"></script>
+    <script type="text/javascript" src="js/targets.js"></script>
+
+    <script type="text/javascript" src="/refresh/client.js"></script>
+  </body>
+</html>

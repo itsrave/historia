@@ -1,0 +1,75 @@
+@import url("sala-variables.css");
+
+* {
+  cursor: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: var(--color-text);
+  text-align: center;
+  font-family: sans-serif;
+  /* background-image: url("logo-tekst.svg");
+     background-repeat: no-repeat;
+     background-position: center calc(100% - var(--vertical-margin));
+     background-attachment: fixed; */
+  background-color: var(--color-background);
+}
+
+h1 {
+  color: var(--color-text);
+  margin: var(--vertical-margin) var(--horizontal-margin) 0.5em;
+  padding: 0.25em;
+  font-size: xx-large;
+  background-color: var(--color-row);
+  border-radius: var(--border);
+}
+
+table {
+  margin: 0 auto;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+td, th {
+  background-color: var(--color-logo);
+}
+
+tr:not(:first-of-type) td {
+  text-align: left;
+}
+
+tr:not(:first-of-type) td:first-of-type {
+  text-align: right;
+}
+
+td, th {
+  padding: 0.3em;
+  border-radius: var(--border);
+}
+
+td:nth-of-type(n+3) {
+  min-width: var(--last-cell-width);
+}
+
+.highlight * {
+  background-color: var(--color-highlight) !important;
+  font-weight: 700;
+}
+
+/* opiekunowie sali */
+div {
+  background-color: var(--color-logo);
+  border-radius: var(--border);
+  padding: 0.25em 0.5em;
+  margin: 1em auto 0;
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content; /* Chrome */
+}

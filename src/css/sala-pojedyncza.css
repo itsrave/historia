@@ -1,0 +1,43 @@
+@import url("sala-variables.css");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  outline: none;
+  border: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+#clock {
+  top: 0;
+  height: var(--clock-height);
+  width: 100vw;
+}
+
+#left, #right {
+  top: var(--clock-height);
+}
+
+#left {
+  left: 0;
+}
+
+#bottom {
+  height: var(--iss-height);
+  width: 100vw;
+  bottom: 0;
+}
+
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  cursor: none;
+}

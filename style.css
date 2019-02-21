@@ -3,16 +3,24 @@ html, body {
     padding: 0 0;
     height: 100%;
     width: 100%;
-    background-color: green;
+    background-color: #231F20;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+#particles-js canvas{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
 }
 .container{
     width: 100%;
     height: 100%;
+    z-index: 999;
 }
 .container-slides{
     margin: 0 0;
     position: relative;
-    background-color: aqua;
     width: 80%;
     height: 80%;
     left: 10%;
@@ -20,27 +28,56 @@ html, body {
     top: 5%;
 }
 .text{
+    border-width: 5px;
+    border-radius: 10px;
     position: absolute;
     width: 50%;
     height: 100%;
-    background-color: blue;
+    background-color: #272425;
+    margin-right: 5px;
+    overflow: auto;
+}
+.title{
+    margin: 0 0;
     font-size: 34px;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.textcontent {
+    margin: 0 0;
+    padding: 15px;
+    text-align: left;
+    font-size: 24px;
 }
 .images{
+    border-width: 5px;
+    border-radius: 10px;
     position: absolute;
     left: 50%;
     width: 50%;
     height: 100%;
-    background-color: red;
+    background-color: #272425;
+    margin-left: 5px;
+    overflow: auto;
 }
 .image{
-    width: 100%;
-    height: 50%;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 100%;
+    height: auto;
 }
 .image:nth-child(odd){
-    display: block
+    display: block;
+}
+.image:nth-child(even){
+    margin-top: 5px;
+}
+.image:first-child{
+    border-right-width: 5px;
+    border-top-right-radius: 10px;
+}
+.image:last-child{
+    border-right-width: 5px;
+    border-bottom-right-radius: 10px;
 }
 .logopng {
     width: 650px;
@@ -69,12 +106,11 @@ html, body {
     outline: none;
     width: 100%;
     height: 9px;
-    background: #737373;
+    background: #3C3839;
     opacity: 0.7;
-    border-radius: 3px;
+    border-radius: 5px;
     -webkit-transition: opacity .2s;
     -moz-transition: opacity .2s;
-    -ms-transition: opacity .2s;
     -o-transition: opacity .2s;
     transition: opacity .2s;
 }
@@ -89,11 +125,10 @@ html, body {
 .slider:hover{
     opacity: 1;
 }
-/* Tooltip text */
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 10%;
-    background-color: #555;
+    background-color: #2B2829;
     color: #fff;
     text-align: center;
     position: absolute;
@@ -102,22 +137,38 @@ html, body {
     left: 45%;
     opacity: 0;
     transition: opacity .2s;
+    border-width: 3px;
+    border-radius: 4px;
 }
 .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: #2B2829;
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 .container-slides .slidercontainer{
     justify-content: center;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #292627;
+}
+::-webkit-scrollbar-thumb {
+    background: #3C3839;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-corner{
+    background: #2B2829;
 }

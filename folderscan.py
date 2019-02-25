@@ -15,13 +15,20 @@ def years(directories):
 def text(year):
     path = os.getcwd() + "/static/assets/" + year
     with open(path + "/title.txt", 'r') as f:
-        title = f.read().splitlines()
+        title = f.read()
     with open(path + "/text.txt", 'r') as f:
-        content = f.read().splitlines()
+        content = f.read()
     return title, content
 
 
-print(years(get_directories()))
+def img(year):
+    path = os.getcwd() + "/static/assets/" + year + "/img"
+    files = os.listdir(path)
+    return files
+
+
+
+print(img("1953"))
 
 # i in directories:
 #    print("hello")

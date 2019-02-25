@@ -25,9 +25,7 @@
             <p class="title">{{ title }}</p>
             <p class="textcontent">{{ text }}</p>
         </div>
-        <div class="images">
-            <img class="image" src="../static/img/zdj.%2060.JPG">
-            <img class="image" src="../static/img/zdj.%2064.JPG">
+        <div class="images">{% for p in img %}<img id="{{ p }}" class="image" src="../static/assets/{{ year }}/img/{{ p }}">{% endfor %}
         </div>
     </div>
     <div class="slidercontainer">

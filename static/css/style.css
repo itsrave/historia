@@ -116,10 +116,9 @@ html, body {
 }
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 40px; /* Set a specific slider handle width */
-    height: 40px; /* Slider handle height */
-    background: url("img/logo.png");
-    background-size: 40px 40px;
+    width: 9px; /* Set a specific slider handle width */
+    height: 9px; /* Slider handle height */
+    background: #4CAF50;
     cursor: pointer;
 }
 .slider:hover{

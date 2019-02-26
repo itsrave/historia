@@ -28,7 +28,5 @@ def img(year):
 
 
 
-print(img("1953"))
-
 # i in directories:
 #    print("hello")

@@ -9,22 +9,23 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     year_data = "1953"
-    years_data = (years(get_directories()))
+    years_data = years(get_directories())
     title_data, text_data = text(year_data)
     images = img(year_data)
-
+    directories = get_directories()
     return render_template("story.html", range=years_data, title=title_data, text=text_data,
-                           img=images, year=year_data)
+                           img=images, year=year_data, dirs=directories)
 
 
 @app.route('/<yr>')
 def story(yr):
     year_data = yr
-    years_data = (years(get_directories()))
+    years_data = years(get_directories())
     title_data, text_data = text(year_data)
     images = img(year_data)
+    directories = get_directories()
     return render_template("story.html", range=years_data, title=title_data, text=text_data,
-                           img=images, year=year_data)
+                           img=images, year=year_data, dirs=directories)
 
 
 if __name__ == '__main__':

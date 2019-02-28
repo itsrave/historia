@@ -9,15 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Historia Lckziu</title>
     <script type="text/javascript" src="../static/js/particles.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <script>
-    function getRange() {
-        var x = document.getElementById("range").value;
-        document.getElementById("rvalue").innerHTML = x;
-    }
-    document.addEventListener("mousemove", getRange)
-    </script>
+
 </head>
 <body>
     <div id="particles-js"></div>
@@ -39,4 +31,21 @@
     </div>
 </body>
 <script type="text/javascript" src="../static/js/myparticles.js"></script>
+<script>
+    function getRange() {
+        var x = document.getElementById("range").value;
+        document.getElementById("rvalue").innerHTML = x;
+    }
+    document.addEventListener("mousemove", getRange)
+
+     document.querySelector(`#range`).addEventListener('mouseup', () => {
+
+
+         const page = document.querySelector(`#range`).value;
+
+         let url = `http://127.0.0.1:5000/${page}`;
+
+         window.location.replace(url);
+     });
+</script>
 </html>

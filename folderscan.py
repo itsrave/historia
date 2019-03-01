@@ -16,8 +16,8 @@ def text(year):
     return title, content
 
 
-def img(dir):
-    path = os.getcwd() + "/static/assets/" + dir + "/img"
+def img(directory):
+    path = os.getcwd() + "/static/assets/" + directory + "/img"
     files = os.listdir(path)
     return files
 
@@ -36,6 +36,8 @@ def get_yearsdictionary():
 def range(dictionary):
     range_data = [min(dictionary), max(dictionary)]
     return range_data
+
+
 # .values for numbers
 # .items for all
 # nothing for default

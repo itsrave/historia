@@ -13,18 +13,21 @@
 </head>
 <body>
     <div id="particles-js"></div>
+
     <div class="container">
+        <a href="/{{ previous }}" ><i class="left"></i></a>
+        <a href="/{{ next }}" ><i class="right"></i></a>
     <div class="container-slides">
         <div class="text">
             <p class="title">{{ title }}</p>
             <p class="textcontent">{{ text }}</p>
         </div>
-        <div class="images">{% for p in img %}<img id="{{ p }}" class="image" src="../static/assets/{{ year }}/img/{{ p }}">{% endfor %}
+        <div class="images">{% for p in img %}<img id="{{ p }}" class="image" src="../static/assets/{{ current }}/img/{{ p }}">{% endfor %}
         </div>
     </div>
     <div class="slidercontainer">
         <div class="tooltip">
-            <input type="range" min="{{ range[0] }}" max="{{ range[1] }}" value="{{ year }}" class="slider" id="range">
+            <input type="range" min="{{ range[0] }}" max="{{ range[1] }}" value="{{ sliderpos }}" class="slider" id="range">
             <span onclick="getRange()" class="tooltiptext" id="rvalue"></span>
         </div>
     </div>
@@ -42,10 +45,14 @@
 
 
          const page = document.querySelector(`#range`).value;
+         {% for i in dirs %}
+             if (page == {{ years[i] }}){
+                 let url = `http://127.0.0.1:5000/{{ i }}`;
+                 window.location.replace(url);
+             }
+         {% endfor %}
 
-         let url = `http://127.0.0.1:5000/${page}`;
 
-         window.location.replace(url);
      });
 </script>
 </html>

@@ -93,7 +93,7 @@ html, body {
     width: 60%;
     margin: 0 0;
     left: 20%;
-    top: 10%;
+    top: 11%;
 }
 .tooltip {
     position: relative;
@@ -105,7 +105,7 @@ html, body {
     -webkit-appearance: none;
     outline: none;
     width: 100%;
-    height: 9px;
+    height: 3px;
     background: #3C3839;
     opacity: 0.7;
     border-radius: 5px;
@@ -116,16 +116,17 @@ html, body {
 }
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 9px; /* Set a specific slider handle width */
-    height: 9px; /* Slider handle height */
-    background: #4CAF50;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    border-radius: 100%;
+    background: white;
     cursor: pointer;
 }
 .slider:hover{
     opacity: 1;
 }
 .tooltip .tooltiptext {
-    visibility: hidden;
+    visibility: visible;
     width: 10%;
     background-color: #2B2829;
     color: #fff;
@@ -170,4 +171,34 @@ html, body {
 }
 ::-webkit-scrollbar-corner{
     background: #2B2829;
+}
+i {
+    border: solid white;
+    border-width: 0 20px 20px 0;
+    display: inline-block;
+    padding: 20px;
+    opacity: 0.5;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+i:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.right {
+    position: absolute;
+    top: 45%;
+    right: 3%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    position: absolute;
+    top: 45%;
+    left: 3%;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }

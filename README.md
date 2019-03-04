@@ -1,2 +1,12 @@
 **Historia Lckziu**
-W kazdym folderze z rokiem musi byc folder img, przynajmniej jeden obraz w nim i plii text.txt i title.txt
+
+Wymagania do uruchomienia:
+-
+- minimum 2 foldery w static/assets
+- w każdym folderze pusty plik txt z rokiem, title.txt i text.txt
+- folder img z minimum 1 zdjęciem
+
+Formatowanie tekstu:
+-
+- Działa tylko w text.txt
+- Znaczniki \<b> i \<i> wstawiamy przed tekstem do pogrubienia a zamykamy newlinem

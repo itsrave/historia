@@ -15,12 +15,21 @@
     <div id="particles-js"></div>
 
     <div class="container">
-        <a href="/{{ previous }}" ><i class="left"></i></a>
-        <a href="/{{ next }}" ><i class="right"></i></a>
+        <a href="/{{ previous }}" ><i id="i" class="left"></i></a>
+        <a href="/{{ next }}" ><i id="i" class="right"></i></a>
     <div class="container-slides">
         <div class="text">
             <p class="title">{{ title }}</p>
-            <p class="textcontent">{{ text }}</p>
+            {% for p in text %}<p class="textcontent">
+                {% if p.startswith("<b>") %}
+                <b>{{ p.replace("<b>", "") }}</b>
+                {% elif p.startswith("<i>") %}
+                <i>{{ p.replace("<i>", "") }}</i>
+                {% else %}
+                    {{ p }}
+                {% endif %}
+            </p>
+            {% endfor %}
         </div>
         <div class="images">{% for p in img %}<img id="{{ p }}" class="image" src="../static/assets/{{ current }}/img/{{ p }}">{% endfor %}
         </div>

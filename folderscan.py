@@ -12,7 +12,7 @@ def text(year):
     with open(path + "/title.txt", 'r') as f:
         title = f.read()
     with open(path + "/text.txt", 'r') as f:
-        content = f.read()
+        content = f.read().splitlines()
     return title, content
 
 

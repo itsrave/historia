@@ -39,7 +39,7 @@ html, body {
 }
 .title{
     margin: 0 0;
-    font-size: 34px;
+    font-size: 24px;
     text-align: right;
     margin-top: 15px;
     margin-right: 20px;
@@ -48,7 +48,7 @@ html, body {
     margin: 0 0;
     padding: 15px;
     text-align: left;
-    font-size: 24px;
+    font-size: 16px;
 }
 .images{
     border-width: 5px;
@@ -172,7 +172,7 @@ html, body {
 ::-webkit-scrollbar-corner{
     background: #2B2829;
 }
-i {
+#i {
     border: solid white;
     border-width: 0 20px 20px 0;
     display: inline-block;
@@ -183,7 +183,7 @@ i {
     -o-transition: opacity .2s;
     transition: opacity .2s;
 }
-i:hover{
+#i:hover{
     opacity: 1;
     cursor: pointer;
 }

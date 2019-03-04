@@ -55,5 +55,6 @@ def page_not_found():
 def service_error():
     return render_template('error.html'), 500
 
+
 if __name__ == '__main__':
     app.run()

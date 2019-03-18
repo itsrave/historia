@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/simplelightbox.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Historia Lckziu</title>
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
     <script type="text/javascript" src="../static/js/particles.js"></script>
+    <script type="text/javascript" src="../static/js/particles.js"></script>
+    <script type="text/javascript" src="../static/js/simple-lightbox.js"></script>
+    <script type="text/javascript" src="../static/js/simple-lightbox.min.js"></script>
 
 </head>
 <body>
@@ -31,7 +36,7 @@
             </p>
             {% endfor %}
         </div>
-        <div class="images">{% for p in img %}<img id="{{ p }}" class="image" src="../static/assets/{{ current }}/img/{{ p }}">{% endfor %}
+        <div class="images">{% for p in img %}<a href="../static/assets/{{ current }}/img/{{ p }}"><img class="image gallery" src="../static/assets/{{ current }}/img/{{ p }}"></a>{% endfor %}
         </div>
     </div>
     <div class="slidercontainer">
@@ -63,5 +68,13 @@
 
 
      });
+    const op = {
+        overlay: 'true',
+        spinner: 'true',
+        loop: 'true',
+        enableKeyboard: "true",
+        animationSpeed: "200"
+    };
+    var lightbox = $('.images a').simpleLightbox(op);
 </script>
 </html>

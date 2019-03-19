@@ -8,13 +8,6 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <script type="text/javascript" src="../static/js/particles.js"></script>
     <title>Historia Lckziu</title>
-    <script>
-    function getRange() {
-        var x = document.getElementById("range").value;
-        document.getElementById("rvalue").innerHTML = x;
-    }
-    document.addEventListener("click", getRange)
-    </script>
 </head>
 
 <body>
@@ -44,6 +37,8 @@
         document.getElementsByClassName("loader")[0].style="visibility: visible;";
     }
     document.addEventListener("mousemove", redirect);
-    document.addEventListener("DOMContentLoaded", setTimeout(hideLoader, 1000));
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(hideLoader, 1000)
+    });
 </script>
 </html>

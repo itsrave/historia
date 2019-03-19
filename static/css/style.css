@@ -96,12 +96,7 @@ html, body {
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.slidercontainer{
+.slidercontainer {
     position: relative;
     width: 60%;
     margin: 0 0;
@@ -140,18 +135,21 @@ html, body {
 }
 .tooltip .tooltiptext {
     visibility: visible;
-    width: 10%;
     background-color: #2B2829;
     color: #fff;
+    padding: 0.4rem;
     text-align: center;
-    position: absolute;
     z-index: 1;
-    bottom: 125%;
-    left: 45%;
     opacity: 0;
     transition: opacity .2s;
     border-width: 3px;
     border-radius: 4px;
+    word-break: initial;
+    position: absolute;
+    width: 50%;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -25%;
 }
 .tooltip .tooltiptext::after {
     content: "";
@@ -159,7 +157,7 @@ html, body {
     top: 100%;
     left: 50%;
     margin-left: -5px;
-    border: 5px solid transparent;
+    border: 10px solid transparent;
     border-top-color: #2B2829;
 }
 

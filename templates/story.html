@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../static/js/jquery.js"></script>
     <script type="text/javascript" src="../static/js/particles.js"></script>
     <script type="text/javascript" src="../static/js/simple-lightbox.js"></script>
+    <script type="text/javascript" src="../static/js/namedictionary.js"></script>
 
 </head>
 <body>
@@ -39,19 +40,19 @@
         <div class="images">{% for p in img %}<a href="../static/assets/{{ current }}/img/{{ p }}"><img class="image gallery" src="../static/assets/{{ current }}/img/{{ p }}"></a>{% endfor %}
         </div>
     </div>
-    <div class="slidercontainer">
+        <div class="slidercontainer">
         <div class="tooltip">
             <input type="range" min="{{ range[0] }}" max="{{ range[1] }}" value="{{ sliderpos }}" class="slider" id="range">
             <span onclick="getRange()" class="tooltiptext" id="rvalue"></span>
         </div>
-    </div>
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="../static/js/myparticles.js"></script>
 <script>
     function getRange() {
         var x = document.getElementById("range").value;
-        document.getElementById("rvalue").innerHTML = x;
+        document.getElementById("rvalue").innerHTML = names[x - 1];
     }
     document.addEventListener("mousemove", getRange)
 
@@ -76,7 +77,7 @@
         animationSpeed: "200"
     };
     var lightbox = $('.images a').simpleLightbox(op);
-    var redirectTimeoutId = window.setTimeout(redirectToHomepage, 30000)
+    var redirectTimeoutId = window.setTimeout(redirectToHomepage, 60000);
     function redirectToHomepage() {
         window.location.href = 'http://127.0.0.1:5000/';
     }
@@ -86,6 +87,8 @@
     function hideLoader() {
         document.getElementsByClassName("loader")[0].style="visibility: hidden;";
     }
-    document.addEventListener("DOMContentLoaded", setTimeout(hideLoader, 1000));
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(hideLoader, 1000)
+    });
 </script>
 </html>

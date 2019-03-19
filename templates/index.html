@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script type="text/javascript" src="../static/js/particles.js"></script>
     <title>Historia Lckziu</title>
     <script>
     function getRange() {
@@ -17,9 +18,18 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="loader"></div>
+    <div id="particles-js"></div>
+    <div class="containerlogo">
         <img class="logopng" src="../static/img/logo.png">
+        <p class="starttext">Porusz myszą aby rozpocząć</p>
     </div>
 </body>
-
+<script type="text/javascript" src="../static/js/myparticles.js"></script>
+<script type="text/javascript">
+    function redirect() {
+        window.location.replace('http://127.0.0.1:5000/2014');
+    }
+    document.addEventListener("click", redirect)
+</script>
 </html>

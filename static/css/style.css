@@ -38,11 +38,9 @@ html, body {
     overflow: auto;
 }
 .title{
-    margin: 0 0;
     font-size: 24px;
     text-align: right;
-    margin-top: 15px;
-    margin-right: 20px;
+    margin: 15px 20px 0 0;
 }
 .textcontent {
     margin: 0 0;
@@ -79,9 +77,24 @@ html, body {
     border-right-width: 5px;
     border-bottom-right-radius: 10px;
 }
+.containerlogo {
+    position: relative;
+    top: 10vh;
+    margin: auto;
+    width: 500px;
+}
 .logopng {
-    width: 650px;
-    height: 650px;
+    width: 500px;
+    height: 500px;
+}
+.starttext {
+    padding-top: 1vh;
+    text-align: center;
+    -webkit-animation: blinking;
+    -o-animation: blinking;
+    animation: blinking;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 .tooltip {
     position: relative;
@@ -172,33 +185,48 @@ html, body {
 ::-webkit-scrollbar-corner{
     background: #2B2829;
 }
-#i {
-    border: solid white;
-    border-width: 0 20px 20px 0;
-    display: inline-block;
-    padding: 20px;
-    opacity: 0.5;
+.i {
+    border: solid white !important;
+    border-width: 0 20px 20px 0 !important;
+    display: inline-block !important;
+    padding: 20px !important;
+    opacity: 0.5 !important;
     -webkit-transition: opacity .2s;
     -moz-transition: opacity .2s;
     -o-transition: opacity .2s;
     transition: opacity .2s;
 }
-#i:hover{
-    opacity: 1;
-    cursor: pointer;
+.i:hover{
+    opacity: 1 !important;
+    cursor: pointer !important;
 }
 .right {
-    position: absolute;
-    top: 45%;
-    right: 3%;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
+    position: absolute !important;
+    top: 45% !important;
+    right: 3% !important;
+    transform: rotate(-45deg) !important;
+    -webkit-transform: rotate(-45deg) !important;
 }
 
 .left {
+    position: absolute !important;
+    top: 45% !important;
+    left: 3% !important;
+    transform: rotate(135deg) !important;
+    -webkit-transform: rotate(135deg) !important;
+}
+.position {
+    top: 48.5% !important;
+}
+.loader {
+    height: 100%;
+    width: 100%;
     position: absolute;
-    top: 45%;
-    left: 3%;
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
+    z-index: 999999;
+    background-color: #282425;
+}
+@keyframes blinking {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
 }

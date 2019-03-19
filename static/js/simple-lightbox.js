@@ -149,7 +149,7 @@ $.fn.simpleLightbox = function( options )
 		overlay = $('<div>').addClass('sl-overlay'),
 		closeBtn = $('<button>').addClass('sl-close').html(options.closeText),
 		spinner = $('<div>').addClass('sl-spinner').html('<div></div>'),
-		nav = $('<div>').addClass('sl-navigation').html('<button class="sl-prev">'+options.navText[0]+'</button><button class="sl-next">'+options.navText[1]+'</button>'),
+		nav = $('<div>').addClass('sl-navigation').html('<button class="i left position"></button><button class="i right position"></button>'),
 		counter = $('<div>').addClass('sl-counter').html('<span class="sl-current"></span>/<span class="sl-total"></span>'),
 		animating = false,
 		index = 0,
@@ -283,13 +283,13 @@ $.fn.simpleLightbox = function( options )
 				}
 
 				if(!options.loop) {
-					if(index === 0){ $('.sl-prev').hide();}
-					if(index >= objects.length -1) {$('.sl-next').hide();}
-					if(index > 0){ $('.sl-prev').show(); }
-					if(index < objects.length -1){ $('.sl-next').show(); }
+					if(index === 0){ $('.left').hide();}
+					if(index >= objects.length -1) {$('.right').hide();}
+					if(index > 0){ $('.left').show(); }
+					if(index < objects.length -1){ $('.right').show(); }
 				}
 
-				if(objects.length == 1) $('.sl-prev, .sl-next').hide();
+				if(objects.length == 1) $('.left, .right').hide();
 
 				if(dir == 1 || dir == -1){
 					var css = { 'opacity': 1.0 };
@@ -367,7 +367,7 @@ $.fn.simpleLightbox = function( options )
 			nav.on('click.'+prefix, 'button', throttle(function(e){
 				e.preventDefault();
 				swipeDiff = 0;
-				loadImage( $(this).hasClass('sl-next') ? 1 : -1 );
+				loadImage( $(this).hasClass('right') ? 1 : -1 );
 			}, options.throttleInterval));
 
 			// touch helpers

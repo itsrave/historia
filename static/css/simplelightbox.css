@@ -61,10 +61,10 @@ body.hidden-scroll {
       z-index: 10060;
       font-family: Arial, Baskerville, monospace;
       color: #FFF; }
-      .sl-wrapper .sl-navigation button.sl-next {
+      .sl-wrapper .sl-navigation button.right {
         right: 5px;
         font-size: 5rem; }
-      .sl-wrapper .sl-navigation button.sl-prev {
+      .sl-wrapper .sl-navigation button.left {
         left: 5px;
         font-size: 5rem; }
       .sl-wrapper .sl-navigation button:focus {
@@ -72,19 +72,19 @@ body.hidden-scroll {
       @media (min-width: 35.5em) {
         .sl-wrapper .sl-navigation button {
           width: 44px; }
-          .sl-wrapper .sl-navigation button.sl-next {
+          .sl-wrapper .sl-navigation button.right {
             right: 10px;
             font-size: 5rem; }
-          .sl-wrapper .sl-navigation button.sl-prev {
+          .sl-wrapper .sl-navigation button.left {
             left: 10px;
             font-size: 5rem; } }
       @media (min-width: 50em) {
         .sl-wrapper .sl-navigation button {
           width: 44px; }
-          .sl-wrapper .sl-navigation button.sl-next {
+          .sl-wrapper .sl-navigation button.right {
             right: 20px;
             font-size: 5rem; }
-          .sl-wrapper .sl-navigation button.sl-prev {
+          .sl-wrapper .sl-navigation button.left {
             left: 20px;
             font-size: 5rem; } }
   .sl-wrapper .sl-image {

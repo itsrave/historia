@@ -11,17 +11,15 @@
     <title>Historia Lckziu</title>
     <script type="text/javascript" src="../static/js/jquery.js"></script>
     <script type="text/javascript" src="../static/js/particles.js"></script>
-    <script type="text/javascript" src="../static/js/particles.js"></script>
     <script type="text/javascript" src="../static/js/simple-lightbox.js"></script>
-    <script type="text/javascript" src="../static/js/simple-lightbox.min.js"></script>
 
 </head>
 <body>
     <div id="particles-js"></div>
 
     <div class="container">
-        <a href="/{{ previous }}" ><i id="i" class="left"></i></a>
-        <a href="/{{ next }}" ><i id="i" class="right"></i></a>
+        <a href="/{{ previous }}" ><div class="i left"></div></a>
+        <a href="/{{ next }}" ><div class="i right"></div></a>
     <div class="container-slides">
         <div class="text">
             <p class="title">{{ title }}</p>
@@ -76,5 +74,12 @@
         animationSpeed: "200"
     };
     var lightbox = $('.images a').simpleLightbox(op);
+    var redirectTimeoutId = window.setTimeout(redirectToHomepage, 5000)
+    function redirectToHomepage() {
+        window.location.href = 'http://127.0.0.1:5000/';
+    }
+    window.addEventListener('click keypress mousemove', function() {
+        window.clearTimeout(redirectTimeoutId)
+    }, true)
 </script>
 </html>

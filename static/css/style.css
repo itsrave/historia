@@ -224,6 +224,11 @@ html, body {
     position: absolute;
     z-index: 999999;
     background-color: #282425;
+    -webkit-animation-name: fade;
+    -moz-animation-name: fade;
+    -o-animation-name: fade;
+    animation-name: fade;
+    animation-duration: 1s;
 }
 .logoloader {
     position: relative;
@@ -259,4 +264,12 @@ html, body {
         -ms-transform: rotate(360deg);
         -o-transform: rotate(360deg);
         transform: rotate(360deg);}
+}
+@keyframes fade {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes show {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

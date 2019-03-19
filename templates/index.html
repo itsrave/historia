@@ -29,13 +29,21 @@
 </body>
 <script type="text/javascript" src="../static/js/myparticles.js"></script>
 <script type="text/javascript">
-    function redirect() {
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    async function redirect() {
+        showLoader();
+        await sleep(1000);
         window.location.replace('http://127.0.0.1:5000/2014');
     }
     function hideLoader() {
         document.getElementsByClassName("loader")[0].style="visibility: hidden;";
     }
-    document.addEventListener("click", redirect);
-    document.addEventListener("DOMContentLoaded", setTimeout(hideLoader, 500));
+    function showLoader() {
+        document.getElementsByClassName("loader")[0].style="visibility: visible;";
+    }
+    document.addEventListener("mousemove", redirect);
+    document.addEventListener("DOMContentLoaded", setTimeout(hideLoader, 1000));
 </script>
 </html>

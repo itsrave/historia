@@ -16,7 +16,9 @@
 </head>
 <body>
     <div id="particles-js"></div>
-
+    <div class="loader">
+        <div class="logoloader"><img class="loaderimg" src="../static/img/loaderlogo.png"/> </div>
+    </div>
     <div class="container">
         <a href="/{{ previous }}" ><div class="i left"></div></a>
         <a href="/{{ next }}" ><div class="i right"></div></a>
@@ -74,12 +76,16 @@
         animationSpeed: "200"
     };
     var lightbox = $('.images a').simpleLightbox(op);
-    var redirectTimeoutId = window.setTimeout(redirectToHomepage, 5000)
+    var redirectTimeoutId = window.setTimeout(redirectToHomepage, 30000)
     function redirectToHomepage() {
         window.location.href = 'http://127.0.0.1:5000/';
     }
     window.addEventListener('click keypress mousemove', function() {
         window.clearTimeout(redirectTimeoutId)
     }, true)
+    function hideLoader() {
+        document.getElementsByClassName("loader")[0].style="visibility: hidden;";
+    }
+    document.addEventListener("DOMContentLoaded", setTimeout(hideLoader, 300));
 </script>
 </html>

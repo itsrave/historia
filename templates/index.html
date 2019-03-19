@@ -18,7 +18,9 @@
 </head>
 
 <body>
-    <div class="loader"></div>
+    <div class="loader">
+        <div class="logoloader"><img class="loaderimg" src="../static/img/loaderlogo.png"/> </div>
+    </div>
     <div id="particles-js"></div>
     <div class="containerlogo">
         <img class="logopng" src="../static/img/logo.png">
@@ -30,6 +32,10 @@
     function redirect() {
         window.location.replace('http://127.0.0.1:5000/2014');
     }
-    document.addEventListener("click", redirect)
+    function hideLoader() {
+        document.getElementsByClassName("loader")[0].style="visibility: hidden;";
+    }
+    document.addEventListener("click", redirect);
+    document.addEventListener("DOMContentLoaded", setTimeout(hideLoader, 500));
 </script>
 </html>

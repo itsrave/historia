@@ -36,7 +36,8 @@ def story(position):
         nex = get_directories()[nexindex]
     except IndexError:
         nex = min(get_directories())
-    return render_template("story.html", range=range_data, title=title_data, text=text_data,
+    return render_template("story.html", range=range_data, title=title_data,
+                           text=text_data,
                            img=images, current=position, dirs=directories, years=yearsdict,
                            sliderpos=range_pos, previous=pre, next=nex)
 

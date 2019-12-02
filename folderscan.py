@@ -1,4 +1,6 @@
+import codecs
 import os
+import markdown2
 
 
 def get_directories():
@@ -11,9 +13,9 @@ def text(year):
     path = os.getcwd() + "/static/assets/" + year
     with open(path + "/title.txt", 'r') as f:
         title = f.read()
-    with open(path + "/text.txt", 'r') as f:
-        content = f.read().splitlines()
-    return title, content
+    with codecs.open(path + "/text.md", mode="r", encoding="utf-8") as f:
+        content = f.read()
+    return title, markdown2.markdown(content)
 
 
 def img(directory):

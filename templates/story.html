@@ -26,16 +26,9 @@
     <div class="container-slides">
         <div class="text">
             <p class="title">{{ title }}</p>
-            {% for p in text %}<p class="textcontent">
-                {% if p.startswith("<b>") %}
-                <b>{{ p.replace("<b>", "") }}</b>
-                {% elif p.startswith("<i>") %}
-                <i>{{ p.replace("<i>", "") }}</i>
-                {% else %}
-                    {{ p }}
-                {% endif %}
-            </p>
-            {% endfor %}
+            <div class="textcontent">
+                {{ text|safe }}
+            </div>
         </div>
         <div class="images">{% for p in img %}<a href="../static/assets/{{ current }}/img/{{ p }}"><img class="image gallery" src="../static/assets/{{ current }}/img/{{ p }}"></a>{% endfor %}
         </div>
@@ -77,13 +70,13 @@
         animationSpeed: "200"
     };
     var lightbox = $('.images a').simpleLightbox(op);
+    window.addEventListener('click keypress mousemove', function() {
+        window.clearTimeout(redirectTimeoutId)
+    }, true)
     var redirectTimeoutId = window.setTimeout(redirectToHomepage, 60000);
     function redirectToHomepage() {
         window.location.href = 'http://127.0.0.1:5000/';
     }
-    window.addEventListener('click keypress mousemove', function() {
-        window.clearTimeout(redirectTimeoutId)
-    }, true)
     function hideLoader() {
         document.getElementsByClassName("loader")[0].style="visibility: hidden;";
     }
